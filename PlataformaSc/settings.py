@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'login',
 ]
 
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'PlataformaSc.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['C:/Users/Administrador/Desktop/PlataformaSc/login/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
