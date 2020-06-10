@@ -1,0 +1,24 @@
+{%extends "base.html"%}
+
+    {% block title%}
+    PRUEBA 1
+    {%endblock%}
+
+    {%block content%}
+    <h1>PRUEBA 1</h1> 
+    <table>
+        <tr>
+            <th> Name </th>
+            <th> Nivel </th>
+        </tr>
+        <tr> 
+            {% for user in users %}
+            <td>{{user.nombre}}</td>
+            <td>{{user.id_nivelU.nivel_usuario}}</td>
+            
+        </tr>    
+        {% endfor %}
+    </table>
+
+    {%endblock%}
+

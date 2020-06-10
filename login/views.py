@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Nivel,User
+from .models import *
 from .serializers import NivelSerializer, UserSerializer
 # Create your views here.
 @api_view(['GET'])
@@ -48,4 +48,6 @@ def deleteuser(request, pk):
     usuarios.delete()
     return Response('Item succsesfully delete')
 
-
+def base(request):
+    users = User.objects.all()
+    return render(request, 'list.html', {'users': users})
